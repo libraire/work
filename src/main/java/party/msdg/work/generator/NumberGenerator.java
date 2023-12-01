@@ -14,15 +14,22 @@ public class NumberGenerator {
     
     /**
      * 随机生成指定范围的整数
-     * [min, max]
+     * [min, max）
      * @param max   最大
      * @param min   最小
      */
     public int nextInt(int max, int min) {
         
-        return (int) (min + Math.random() * (max + 1 - min));
+        return (int) (min + Math.random() * (max - min));
     }
     
+    /**
+     * 随机生成指定范围的浮点数
+     * [min, max)
+     * @param max   最大（不包含）
+     * @param min   最小（包含
+     * @param precision 精度
+     */
     public double nextDouble(double max, double min, int precision) {
         double value = ThreadLocalRandom.current().nextDouble(min, max);
         BigDecimal bd = new BigDecimal(Double.toString(value));
