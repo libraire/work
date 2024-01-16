@@ -1,10 +1,10 @@
-package party.msdg.work.toolkit.work;
+package party.msdg.work.base.work;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import party.msdg.work.toolkit.LittleTrick;
 
-import static party.msdg.work.toolkit.work.WorkContext.*;
+import static party.msdg.work.base.work.WorkContext.*;
 
 /**
  * 业务异常类，封装各种需要的信息。

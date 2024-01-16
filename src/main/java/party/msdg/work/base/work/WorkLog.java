@@ -1,4 +1,4 @@
-package party.msdg.work.toolkit.work;
+package party.msdg.work.base.work;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import party.msdg.work.toolkit.LittleTrick;
 
-import static party.msdg.work.toolkit.work.WorkContext.*;
+import static party.msdg.work.base.work.WorkContext.*;
 
 public class WorkLog {
     

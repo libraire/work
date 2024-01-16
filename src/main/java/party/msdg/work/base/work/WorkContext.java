@@ -1,4 +1,4 @@
-package party.msdg.work.toolkit.work;
+package party.msdg.work.base.work;
 
 import lombok.Getter;
 import lombok.Setter;

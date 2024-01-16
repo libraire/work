@@ -1,9 +1,9 @@
-package party.msdg.work.toolkit.work;
+package party.msdg.work.base.work;
 
 import org.springframework.http.HttpStatus;
 import party.msdg.work.toolkit.LittleTrick;
 
-import static party.msdg.work.toolkit.work.WorkContext.*;
+import static party.msdg.work.base.work.WorkContext.*;
 
 /**
  * Wow! Sweet moon.
@@ -107,6 +107,10 @@ public class WorkAssert {
     public static WorkAssertInfoBuilder lessThan(long value, long target) {
         return isTrue(value < target);
     }
+    
+    public static WorkAssertInfoBuilder lessThan(double value, double target) {
+        return isTrue(value < target);
+    }
 
     /**
      * value > target = true
@@ -116,6 +120,10 @@ public class WorkAssert {
     }
 
     public static WorkAssertInfoBuilder moreThan(long value, long target) {
+        return isTrue(value > target);
+    }
+    
+    public static WorkAssertInfoBuilder moreThan(double value, double target) {
         return isTrue(value > target);
     }
 
@@ -129,6 +137,10 @@ public class WorkAssert {
     public static WorkAssertInfoBuilder lessEqual(long value, long target) {
         return isTrue(value <= target);
     }
+    
+    public static WorkAssertInfoBuilder lessEqual(double value, double target) {
+        return isTrue(value <= target);
+    }
 
     /**
      * value >= target = true
@@ -138,6 +150,10 @@ public class WorkAssert {
     }
 
     public static WorkAssertInfoBuilder moreEqual(long value, long target) {
+        return isTrue(value >= target);
+    }
+    
+    public static WorkAssertInfoBuilder moreEqual(double value, double target) {
         return isTrue(value >= target);
     }
     

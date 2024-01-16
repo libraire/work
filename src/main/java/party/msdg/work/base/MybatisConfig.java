@@ -1,4 +1,4 @@
-package party.msdg.work;
+package party.msdg.work.base;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -14,10 +14,10 @@ import javax.sql.DataSource;
  * mybatis配置
  */
 @Configuration
-@MapperScan(basePackages = "party.msdg.work", sqlSessionFactoryRef = "oneFactory")
+@MapperScan(basePackages = "party.msdg.work", sqlSessionFactoryRef = "workFactory")
 class MybatisConfig {
 
-    @Bean(name = "oneFactory")
+    @Bean(name = "workFactory")
     @Autowired
     public SqlSessionFactory oneFactory(DataSource dataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
@@ -28,7 +28,7 @@ class MybatisConfig {
         sessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mybatis/**/*.xml"));
 
         // 设置别名解析基本包
-        sessionFactoryBean.setTypeAliasesPackage("party.msdg.one");
+        sessionFactoryBean.setTypeAliasesPackage("party.msdg.work");
         return sessionFactoryBean.getObject();
     }
 

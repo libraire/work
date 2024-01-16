@@ -1,8 +1,8 @@
-package party.msdg.work.toolkit.work;
+package party.msdg.work.base.work;
 
 /**
  * <h1>编码规范 <code>1 2 3 4 5 6</code></h1>
- *
+ * <p>
  * <br/>
  * <pre>
  *     1 2 大模块编号
@@ -15,26 +15,14 @@ package party.msdg.work.toolkit.work;
  * </pre>
  * Wow! Sweet moon.🌕
  */
-public class WorkCode {
+public record WorkCode(int code, String text) {
     
     /**
      * 默认异常
      */
     public static WorkCode DEF = new WorkCode(100000, "业务异常");
     
-    private final int code;
-    private final String text;
+    public static WorkCode UNLOGIN = new WorkCode(111001, "需要登录后访问");
     
-    public WorkCode(int code, String text) {
-        this.code = code;
-        this.text = text;
-    }
-    
-    public int code() {
-        return code;
-    }
-    
-    public String text() {
-        return text;
-    }
+    public static final WorkCode DB_SOURCE_NOT_FOUND = new WorkCode(112001, "数据未找到。");
 }

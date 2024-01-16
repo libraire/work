@@ -1,9 +1,9 @@
 spring.datasource:
     name: one
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:11001/one
+    url: jdbc:mysql://localhost:11001/work
     username: root
-    password: one_test
+    password: work
 
 server:
     port: 8557

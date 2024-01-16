@@ -1,8 +1,7 @@
-package party.msdg.work.toolkit.work;
+package party.msdg.work.base.work;
 
 /**
  * 努力工作，赚钱养家
- *
  * Wow! Sweet moon.
  */
 public class Work {
