@@ -23,6 +23,9 @@ public record WorkCode(int code, String text) {
     public static WorkCode DEF = new WorkCode(100000, "业务异常");
     
     public static WorkCode UNLOGIN = new WorkCode(111001, "需要登录后访问");
+    public static WorkCode REGISTER_FAIL = new WorkCode(111100, "注册失败");
+    public static WorkCode UNREGISTER = new WorkCode(111101, "请先注册");
+    public static WorkCode LOGIN_NOT_MATCH = new WorkCode(111102, "账号或密码不匹配，无法登录");
     
     public static final WorkCode DB_SOURCE_NOT_FOUND = new WorkCode(112001, "数据未找到。");
 }

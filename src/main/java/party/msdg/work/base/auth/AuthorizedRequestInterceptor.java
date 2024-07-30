@@ -1,5 +1,6 @@
 package party.msdg.work.base.auth;
 
+import cn.dev33.satoken.stp.StpUtil;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -29,8 +30,7 @@ public class AuthorizedRequestInterceptor implements HandlerInterceptor {
         if (DispatcherType.REQUEST == dispatchType || DispatcherType.ASYNC == dispatchType) {
             
             if (handler instanceof HandlerMethod) {
-                String loginUserId = request.getHeader(XHeaders.LOGIN_USER_ID);
-                if (LittleTrick.isEmpty(loginUserId) && !response.isCommitted()) {
+                if (! StpUtil.isLogin()) {
                     response.setStatus(HttpStatus.UNAUTHORIZED.value());
                     response.setContentType("application/json;charset=UTF-8");
                     String message = makeErrMsg(request.getRequestURI(), WorkCode.UNLOGIN);

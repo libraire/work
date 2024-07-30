@@ -1,5 +1,18 @@
 use work;
 
+drop table if exists uc_user;
+create table uc_user
+(
+    id       int auto_increment primary key,
+    account  varchar(50)                        not null comment '账号',
+    password varchar(20)                        null comment '密码MD5',
+    ctime    datetime default CURRENT_TIMESTAMP not null,
+    mtime    datetime default current_timestamp not null on update current_timestamp,
+    unique index idx_account(account)
+);
+
+
+
 drop table if exists db_source;
 create table db_source
 (
@@ -18,3 +31,4 @@ create table db_source
     cuser    int                                not null comment "创建人",
     muser    int                                not null comment "修改人" default 0
 );
+

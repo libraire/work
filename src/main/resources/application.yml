@@ -1,9 +1,3 @@
-spring.datasource:
-    name: one
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:11001/work
-    username: root
-    password: work
-
-server:
-    port: 8557
+spring:
+  profiles:
+    active: dev
