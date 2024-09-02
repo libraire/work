@@ -4,11 +4,11 @@ server:
 
 ###数据库配置###
 spring.datasource:
-  name: one
+  name: renova
   driver-class-name: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://localhost:11001/work
+  url: jdbc:mysql://localhost:3306/work
   username: root
-  password: work
+  password: 123
 
 ############## Sa-Token 配置 (文档: https://sa-token.cc) ##############
 sa-token:

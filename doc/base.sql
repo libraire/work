@@ -1,7 +1,7 @@
 use work;
 
-drop table if exists uc_user;
-create table uc_user
+drop table if exists t_uc_user;
+create table t_uc_user
 (
     id       int auto_increment primary key,
     account  varchar(50)                        not null comment '账号',
@@ -12,9 +12,8 @@ create table uc_user
 );
 
 
-
-drop table if exists db_source;
-create table db_source
+drop table if exists t_db_source;
+create table t_db_source
 (
     id       int auto_increment primary key,
     name     varchar(50)                        not null comment "数据源名称",
